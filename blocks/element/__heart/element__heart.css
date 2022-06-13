@@ -1,0 +1,18 @@
+.element__heart {
+    height: 19px;
+    width: 22px;
+    border: none;
+    background: #FFFF;
+    background-image: url(../../../image/heart.svg);
+    align-self: center;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.element__heart:hover {
+    opacity: .5;
+}
+
+.element__heart_check {
+    background-image: url(../../../image/Union.svg);
+}

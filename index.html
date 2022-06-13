@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./pages/index.css">
+  <title>MESTO</title>
+</head>
+
+<body class="page">
+
+  <header class="header">
+    <img class="header__logo" alt="Место" src="./image/logo.svg">
+  </header>
+  <main class="content">
+    <section class="profile">
+      <img class="profile__avatar" alt="Кусто" src="./image/image.jpg">
+      <div class="profile__info">
+        <h1 class="profile__title">Жак-Ив Кусто</h1>
+        <button class="profile__btn-edit" type="button"></button>
+        <p class="profile__text">Исследователь океана</p>
+      </div>
+      <button class="profile__btn-add" type="button"></button>
+    </section>
+    <section class="elements">
+     
+    </section>
+    <template id = "elements">
+      <div class="element">
+        <img class="element__image" src="#" alt="">
+        <div class="element__caption">
+          <h2 class="element__title"></h2>
+          <button class="element__heart " type="button"> </button>
+        </div>
+        <button class="element__trash" type="button" aria-label="удалить"></button>
+      </div>
+    </template>
+
+  </main>
+  <footer class="footer">
+    <p class="footer__copyright">&#169;2022 Mesto Russia</p>
+  </footer>
+
+  <section id="profile" class="popup  popup_button_edit">
+    <div class="popup__container">
+      <button class="popup__edit-close" type="button"></button>
+      <h2 class="popup__title">Редактировать профиль</h2>
+       <form name="profile"class="popup__input-form" id ='input-edit' novalidate>
+        <input class="popup__input popup__input_type_name" minlength="2" maxlength="40" id="name" name="name" type="text" value="Жак-Ив Кусто" placeholder="Жак-Ив Кусто" required>
+        <span class="popup__item-error name-error"></span>
+        <input class="popup__input popup__input_type_info" minlength="2" maxlength="200" id="info" name="info" type="text" value="Исследователь океана" placeholder="Исследователь океана" required>
+        <span class="popup__item-error info-error"></span>
+        <button class="popup__submit" type="submit">Сохранить</button>
+    </form>
+    </div>
+  </section>
+  <section id="place" class="popup  popup_add">
+    <div class="popup__container">
+      <button class="popup__close" type="button"></button>
+      <h2 class="popup__title">Новое место</h2>
+      <form name="place" class="popup__input-form" id ="add_place" novalidate>
+        <input class="popup__input popup__input_type_place"  minlength="2" maxlength="20" id="place_name" name="place_name" type="text" value="" placeholder="Название" required>
+        <span class="popup__item-error image-name-error"></span>
+        <input class="popup__input popup__input_type_link"  id="link" name="link" type="url" value="" placeholder="Ссылка на картинку" required>
+        <span class="popup__item-error image-link-error"></span>
+        <button class="popup__submit" type="submit">Создать</button>
+    </form>
+    </div>
+  </section>
+  <section class="popup popup_img ">
+    <figure class="popup__image">
+      <button class="popup__img-close" type="button" aria-label="закрыть"></button>
+      <img class="popup__item-image"
+        src="https://images.unsplash.com/photo-1581010124530-f3c49901215f?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"
+        alt="Маттерхорн">
+      <figcaption class="popup__item-text"></figcaption>
+    </figure>
+  </section>
+
+ 
+ 
+  <script src="./scripts/card.js"></script>
+
+</body>
+
+</html>

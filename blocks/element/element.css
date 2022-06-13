@@ -1,0 +1,32 @@
+.element {
+  min-width: 282px;
+  background: #FFFFFF;
+  margin-right: 17px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  max-height: 361px;
+  position: relative;
+
+}
+
+.element:nth-child(3n) {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 940px) {
+  .element:nth-child(3n) {
+    margin-right: 17px;
+  }
+  .element:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 670px) {
+  .element {
+    margin-right: 0;
+  }
+  .element:nth-child(3n) {
+    margin-right: 0;
+  }
+}

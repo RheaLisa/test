@@ -1,0 +1,17 @@
+.element__caption {
+  display: flex;
+  flex-direction: row;
+  width: 246px;
+  margin: 25px 15px 31px 21px;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+
+}
+
+@media screen and (max-width: 370px) {
+  .element__caption {
+    margin: 20px 15px 31px 21px;
+  }
+
+}

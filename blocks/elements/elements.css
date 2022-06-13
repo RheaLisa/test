@@ -1,0 +1,29 @@
+.elements {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 880px;
+  margin: 0 auto;
+  justify-content: center;
+
+}
+@media screen and (max-width: 940px) {
+  .elements {
+   max-width: 600px;
+  }
+
+}
+@media screen and (max-width:670px) {
+  .elements {
+   max-width: 550px;
+  }
+
+}
+@media screen and (max-width: 320px) {
+  .elements {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin: auto;
+    width: 282px;
+  }
+
+}

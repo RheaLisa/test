@@ -1,0 +1,10 @@
+.element__heart_active {
+    background-image: url(../../../../image/Like.svg);
+    height: 19px;
+    width: 22px;
+    border: none;
+    /*background: #FFFF;*/
+    align-self: center;
+    cursor: pointer;
+    margin-right: 10px;
+}

@@ -1,0 +1,10 @@
+.popup__image {
+    display: flex;
+    max-width: fit-content;
+    max-height: fit-content;
+    margin: auto;
+    position: relative;
+    flex-direction: column;
+    top: 50%;
+    transform: translateY(-50%);
+}
