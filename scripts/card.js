@@ -5,7 +5,7 @@ const formUserInfo = document.querySelector("#input-edit");
 const nameUser = document.querySelector(".popup__input_type_name");
 const descriptionUser = document.querySelector(".popup__input_type_info");
 const btnSaveFormUser = document.querySelector(".popup__submit");
-
+const popups = document.querySelectorAll('.popup');
 //-----доступ к попап открытию картинки------
 
 const popupOpenImg = document.querySelector('.popup_img');
@@ -162,12 +162,25 @@ function closeByEscape(evt) {
 }
 
 function deleteErrors(popup) {
-  const errorMessages = popup.querySelectorAll('.popup__item-error');
+  const errorMessages = popup.querySelectorAll('.popup__input-error');
   errorMessages.forEach((errorElement) => {
-    errorElement.classList.remove('popup__item-error_visible');
+    errorElement.classList.remove('popup__input-error_visible');
   });
-  const errorBorder = popup.querySelectorAll('.popup__item');
+  const errorBorder = popup.querySelectorAll('.popup__input');
   errorBorder.forEach((border) => {
-    border.classList.remove('popup__item_type_error');
+    border.classList.remove('popup__input_type_error');
   });
 }
+popups.forEach((popup) => {
+ 
+  const exitButton = popup.querySelector('.popup__close');
+  exitButton.addEventListener('click', function(){
+    closePopup(popup);
+  })
+  popup.addEventListener('mousedown', (evt) => {
+    if (evt.target === evt.currentTarget) {
+      closePopup(popup);
+    }
+  });
+
+});
