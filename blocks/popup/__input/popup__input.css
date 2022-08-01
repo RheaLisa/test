@@ -19,6 +19,31 @@
     }
 
 }
-.popup__item_type_error {
+.popup__input-error {
     border-bottom: 1px solid #FF0000;
 } 
+.popup__input-error {
+    display: none;
+ }
+ 
+ .popup__input-error_visible {
+     display: block;
+     font-size: 12px;
+     font-weight: 400;
+     line-height: 15px;
+     letter-spacing: 0em;
+     text-align: left;
+     color: #FF0000;
+     margin: -25px 36px 13px;
+     max-width: 358px;
+ } 
+ .popup__input_type_error {
+    border-bottom: 1px solid #FF0000;
+} 
+.popup__input:invalid {
+    border: 1px solid red; /* красная рамка для некорректных данных */
+  } 
+  
+  .popup__input:valid {
+    border: 1px solid green; /* зелёная - для корректных */
+  }

@@ -42,9 +42,9 @@
     <p class="footer__copyright">&#169;2022 Mesto Russia</p>
   </footer>
 
-  <section id="profile" class="popup  popup_button_edit">
+  <section id="profile" class="popup popup__bg popup_button_edit">
     <div class="popup__container">
-      <button class="popup__edit-close" type="button"></button>
+      <button class="popup__edit-close"  type="button"></button>
       <h2 class="popup__title">Редактировать профиль</h2>
        <form name="profile"class="popup__input-form" id ='input-edit' novalidate>
         <input class="popup__input popup__input_type_name" minlength="2" maxlength="40" id="name" name="name" type="text" value="Жак-Ив Кусто" placeholder="Жак-Ив Кусто" required>
@@ -55,7 +55,7 @@
     </form>
     </div>
   </section>
-  <section id="place" class="popup  popup_add">
+  <section id="place" class="popup popup__bg popup_add">
     <div class="popup__container">
       <button class="popup__close" type="button"></button>
       <h2 class="popup__title">Новое место</h2>
@@ -68,7 +68,7 @@
     </form>
     </div>
   </section>
-  <section class="popup popup_img ">
+  <section class="popup popup__bg popup_img ">
     <figure class="popup__image">
       <button class="popup__img-close" type="button" aria-label="закрыть"></button>
       <img class="popup__item-image"
@@ -81,7 +81,8 @@
  
  
   <script src="./scripts/card.js"></script>
-
+  <script src="./scripts/validate.js"></script>
+ 
 </body>
 
 </html>
