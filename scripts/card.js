@@ -33,6 +33,14 @@ const container = document.querySelector('.elements');
 function openPopup(popup) {
   popup.classList.add('popup_opened');
   document.addEventListener('keydown', closeByEscape);
+  const errorMessages = popup.querySelectorAll('.popup__input-error');
+  errorMessages.forEach((errorElement) => {
+    errorElement.classList.remove('popup__input-error_visible');
+  });
+  const errorBorder = popup.querySelectorAll('.popup__input');
+  errorBorder.forEach((border) => {
+    border.classList.remove('popup__input_type_error');
+  });
   
 }
 function closePopup(popup) {
@@ -70,6 +78,8 @@ formUserInfo.addEventListener("submit", changeFormUserSubmit);
 //--------слушатели событий------
 
 btnAddElm.addEventListener("click", function (evt) {
+  linkCard.value = "";
+  imageCard.value = "";
   openPopup(formAddElm);
 });
 
