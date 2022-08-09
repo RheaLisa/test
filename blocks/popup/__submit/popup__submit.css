@@ -1,37 +1,47 @@
 .popup__submit {
     
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+    background-color: #000000;
     width: 358px;
     height: 50px;
-    margin-top: 48px;
+    border-radius: 2px;
+    color: #fff;
+    font-family: inherit;
     font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
     line-height: 22px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-     border-radius: 2px;
-     border: none;
-   
-
+    letter-spacing: 0em;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 18px 36px 37px;
 }
 
+.popup__submit_place_delete {
+    margin: 36px 36px;
+}
 
-
-
-@media screen and (max-width: 650px) {
+@media (max-width: 520px) {
     .popup__submit {
         width: 238px;
-        margin-top: 45px;
+        height: 46px;
+        margin: 15px 22px 25px;
         font-size: 14px;
-        line-height: 17px;
-
+        line-height: 16,94px;
     }
-
+    .popup__submit_place_delete {
+        margin: 22px 22px;
+    }
 }
+
 .popup__submit:hover {
     cursor: pointer;
-    opacity: .8;
+}
+
+.popup__submit_disabled {
+    opacity: 20%;
+    background-color: #fff;
+    color: #000000;
+    border: 1px solid #000000;
 }
 

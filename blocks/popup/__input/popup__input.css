@@ -1,16 +1,40 @@
 .popup__input {
     width: 358px;
-    padding-top: 26px;
-    padding-bottom: 11px;
+    margin: 0 36px 30px;
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    color: #000;
     font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
     line-height: 17px;
-    box-sizing: border-box;
-    border-style: none none solid;
-    border-image: initial;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    margin: 0;
+    letter-spacing: 0em;
+    text-align: left;
+    font-family: inherit;
+    padding-bottom: 10px;
 }
-@media screen and (max-width: 650px) {
+.popup__input::-webkit-input-placeholder {
+    opacity: 1;
+}
+.popup__input::-moz-placeholder {
+    opacity: 1;
+}
+.popup__input:-moz-placeholder {
+    opacity: 1;
+}
+.popup__input:-ms-input-placeholder {
+    opacity: 1;
+}
+.popup__input::placeholder {
+    opacity: 1;
+}
+@media (max-width: 520px) {
+    .popup__item {
+        width: 238px;
+        margin: 0 22px 30px;
+    }
+}
+/*@media screen and (max-width: 650px) {
     .popup__input {
         font-weight: 400;
         letter-spacing: 0em;
@@ -18,7 +42,7 @@
         width: 238px;
     }
 
-}
+}*/
 .popup__input-error {
     display: none;
  }
@@ -31,9 +55,10 @@
      line-height: 15px;
      letter-spacing: 0em;
      text-align: left;
-     /*color: #FF0000;*/
+     color: #FF0000;
      margin: -25px 36px 13px;
      max-width: 358px;
+     border: none;
  }
  
  @media (max-width: 520px) {
@@ -43,16 +68,21 @@
      }
  }
  .popup__input_type_error {
-    border-bottom: 1px solid #FF0000;
+    border: 1px solid #FF0000;
+
+    
 } 
 .popup__input:invalid {
     border: 1px solid red; /* красная рамка для некорректных данных */
   } 
   
-  .popup__input:valid {
-    border: 1px solid green; /* зелёная - для корректных */
-  }
+  /*.popup__input:valid {
+    border-bottom: 1px solid green; 
+  }*/
   
-.popup__input:first-child {
-    margin-top: 44px;
-}
+  .popup__input:focus {
+    border-bottom-color: #111111;
+  }
+  .popup__input:first-child {
+    margin-bottom: 24px;
+  }

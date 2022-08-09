@@ -2,8 +2,8 @@ const btnInfoUser = document.querySelector(".profile__btn-edit");
 const formPopupUser = document.querySelector('.popup_button_edit');
 const btnCloseFormUser = document.querySelector(".popup__edit-close");
 const formUserInfo = document.querySelector("#input-edit");
-const nameUser = document.querySelector(".popup__input_type_name");
-const descriptionUser = document.querySelector(".popup__input_type_info");
+const nameUser = document.querySelector("#name");
+const descriptionUser = document.querySelector("#info");
 const btnSaveFormUser = document.querySelector(".popup__submit");
 const popupBg = document.querySelector ('.popup__bg');
 
@@ -19,8 +19,8 @@ const btnAddElm = document.querySelector(".profile__btn-add");
 const formAddElm = document.querySelector(".popup_add");
 const btnCloseAddElm = document.querySelector(".popup__close");
 const formHandlerAddElm = document.querySelector("#add_place");
-const nameCard = document.querySelector(".popup__input_type_place");
-const linkCard = document.querySelector(".popup__input_type_link");
+const nameCard = document.querySelector("#place_name");
+const linkCard = document.querySelector("#link");
 
 //----------данные пользователя-------
 const nameTitle = document.querySelector(".profile__title");
@@ -33,6 +33,15 @@ const container = document.querySelector('.elements');
 function openPopup(popup) {
   popup.classList.add('popup_opened');
   document.addEventListener('keydown', closeByEscape);
+   
+}
+function closePopup(popup) {
+  popup.classList.remove('popup_opened');
+  document.removeEventListener('keydown', closeByEscape);
+ 
+}
+
+function deleteErrors(popup) {
   const errorMessages = popup.querySelectorAll('.popup__input-error');
   errorMessages.forEach((errorElement) => {
     errorElement.classList.remove('popup__input-error_visible');
@@ -41,12 +50,6 @@ function openPopup(popup) {
   errorBorder.forEach((border) => {
     border.classList.remove('popup__input_type_error');
   });
-  
-}
-function closePopup(popup) {
-  popup.classList.remove('popup_opened');
-  document.removeEventListener('keydown', closeByEscape);
- 
 }
 //--------слушатели для открытия форм редактирования-----
 
@@ -78,8 +81,7 @@ formUserInfo.addEventListener("submit", changeFormUserSubmit);
 //--------слушатели событий------
 
 btnAddElm.addEventListener("click", function (evt) {
-  linkCard.value = "";
-  imageCard.value = "";
+  
   openPopup(formAddElm);
 });
 
@@ -160,6 +162,8 @@ function addCardHandler(evt) {
   const newCard = { link: linkCard.value, name: nameCard.value, alt: nameCard.value }
   container.prepend(createCard(newCard));
   evt.target.reset();
+  btnSaveFormUser.disabled = true;
+  btnSaveFormUser.classList.add('popup__submit_disabled');
   closePopup(formAddElm);
 }
 formHandlerAddElm.addEventListener("submit", addCardHandler);
@@ -172,7 +176,7 @@ function closeByEscape(evt) {
 
 document.addEventListener('click', (e) => { // Вешаем обработчик на весь документ
   if(e.target === popupBg) {
-      popupBg.classList.remove('popup_opened'); // Убираем активный класс с фона
+     popupBg.classList.remove('popup_opened'); // Убираем активный класс с фона
       popup.classList.remove('popup_opened'); // И с окна
   }
 });
