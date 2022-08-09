@@ -47,6 +47,7 @@
       <button class="popup__edit-close"  type="button"></button>
       <h2 class="popup__title">Редактировать профиль</h2>
        <form name="profile"class="popup__input-form" id ='input-edit' novalidate>
+        <div class = input-wrap>
         <input class="popup__input"
            minlength="2" 
            maxlength="40" 
@@ -57,7 +58,9 @@
            placeholder="Жак-Ив Кусто" 
            required>
         <span class="popup__input-error name-error"></span>
-        <input class="popup__input" 
+      </div>
+      <div class = input-wrap>
+      <input class="popup__input" 
           minlength="2" 
           maxlength="200" 
           id="info" 
@@ -67,6 +70,7 @@
           placeholder="Исследователь океана" 
           required>
         <span class="popup__input-error info-error"></span>
+        </div>
         <button class="popup__submit" id = "submit" type="submit">Сохранить</button>
     </form>
     </div>
@@ -76,6 +80,7 @@
       <button class="popup__close" type="button"></button>
       <h2 class="popup__title">Новое место</h2>
       <form name="place" class="popup__input-form" id ="add_place" novalidate>
+        <div class = input-wrap>
         <input class="popup__input"
           minlength="2" 
           maxlength="20" 
@@ -86,7 +91,9 @@
           placeholder="Название" 
           required>
         <span class="popup__input-error image-place-error"></span>
-        <input class="popup__input"  
+      </div>
+      <div class = input-wrap>
+      <input class="popup__input"  
           id="link" 
           name="link" 
           type="url" 
@@ -94,6 +101,7 @@
           placeholder="Ссылка на картинку" 
           required>
         <span class="popup__input-error image-link-error">Введите адрес сайта</span>
+        </div>
         <button class="popup__submit" id = "submit" type="submit">Создать</button>
     </form>
     </div>
@@ -107,8 +115,8 @@
       <figcaption class="popup__item-text"></figcaption>
     </figure>
   </section>
-  <script src="./scripts/first.js"></script>
-  <script src="./scripts/second.js"></script>
+  <script src="./scripts/card.js"></script>
+  <script src="./scripts/validate.js"></script>
  
 </body>
 
