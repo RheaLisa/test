@@ -175,9 +175,9 @@ function closeByEscape(evt) {
   }
 } 
 
-document.addEventListener('click', (e) => { // Вешаем обработчик на весь документ
-  if(e.target === popupBg) {
-     popupBg.classList.remove('popup_opened'); // Убираем активный класс с фона
-      popups.classList.remove('popup_opened'); // И с окна
+document.addEventListener('click', (e) => { 
+  if(e.target.classList?.contains('popup__bg')) {
+    const openedPopup = document.querySelector('.popup_opened');
+    closePopup(openedPopup);
   }
 });
